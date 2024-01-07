@@ -18,7 +18,7 @@ const StyledNavbar = styled.nav`
   cursor: 'pointer'
 
 `;
-const NavItems  = styled.ul`
+const NavItems = styled.ul`
 width: 100%;
 display: flex;
 align-items: center;
@@ -46,26 +46,26 @@ const RightAlignedDiv = styled.div`
   margin-left: auto;
 `;
 
-const Navbar = () => {
+const Navbar = ({ darkMode, setDarkMode }) => {
   return (
     <StyledNavbar>
-        <NavItems>
-           
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
-            <a href="#education">Education</a>
-            <a href="#contact">Contact</a>
-         
-            <RightAlignedDiv>
-              <DarkMode  />
-            </RightAlignedDiv>
+      <NavItems>
+
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+
+        <RightAlignedDiv>
+          <DarkMode darkMode={darkMode} setDarkMode={setDarkMode} />
+        </RightAlignedDiv>
 
 
-            
-            
-        </NavItems>
+
+
+      </NavItems>
 
     </StyledNavbar>
 

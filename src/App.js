@@ -2,7 +2,7 @@
 import './App.css';
 import { useState } from "react";
 import styled, { ThemeProvider } from "styled-components";
-import { darkTheme ,lightTheme} from "./utils/Themes"
+import { darkTheme, lightTheme } from "./utils/Themes"
 import Navbar from "./components/Navbar";
 import HeroSection from './components/HeroSection';
 import Skills from './components/Skills';
@@ -33,35 +33,35 @@ function App() {
   const [darkMode, setDarkMode] = useState(true);
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
-      <Navbar>
-          <div><p> About </p></div>
+      <Navbar darkMode={darkMode} setDarkMode={setDarkMode}>
+        {/* <div><p> About </p></div>
           <div><p> Education </p></div>
           <div><p> Projects </p></div>
           <div><p> Experience </p></div>
           <div><p> Other </p></div>
           <RightAlignedDiv>
             <DarkMode/> 
-            </RightAlignedDiv> 
+            </RightAlignedDiv>  */}
       </Navbar>
-      
+
       <Body>
-        <HeroSection/>
+        <HeroSection />
         <Wrapper>
-          
-          <Skills/>
-          <Experience/>
-          <Projects/>
-          <Education/>
-          <Other/>
-          <Contact/>
-          
+
+          <Skills />
+          <Experience />
+          <Projects />
+          <Education />
+          <Other />
+          <Contact />
+
 
 
         </Wrapper>
-        
+
 
       </Body>
-        
+
     </ThemeProvider>
   );
 }
