@@ -1,17 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import { ReactComponent as Sun } from "./Sun.svg";
 import { ReactComponent as Moon } from "./Moon.svg";
 import "./DarkMode.css";
 
-const DarkMode = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+const DarkMode = ({ darkMode, setDarkMode }) => {
 
   const toggleTheme = () => {
-    const newMode = !isDarkMode;
-    setIsDarkMode(newMode);
+    setDarkMode(!darkMode);
 
     // Set the theme directly in your preferred way
-    document.querySelector("body").setAttribute("data-theme", newMode ? "darkTheme" : "lightTheme");
+    document.querySelector("body").setAttribute("data-theme", darkMode ? "darkTheme" : "lightTheme");
   };
 
   return (
@@ -20,7 +18,7 @@ const DarkMode = () => {
         className="dark_mode_input"
         type="checkbox"
         id="darkmode-toggle"
-        checked={isDarkMode}
+        checked={darkMode}
         onChange={toggleTheme}
       />
       <label className="dark_mode_label" htmlFor="darkmode-toggle">
