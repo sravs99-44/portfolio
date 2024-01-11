@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, Grid, CardContent, CardMedia } from '@mui/material';
 import styled from 'styled-components';
 
-import { useState, useEffect } from 'react';
+
 
 
 const Container = styled.div`

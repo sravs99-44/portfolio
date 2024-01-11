@@ -11,7 +11,7 @@ import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Other from './components/Other';
 import Contact from './components/Contact';
-import { Animator, ScrollContainer, ScrollPage, batch, Fade, FadeIn, FadeOut, Move, MoveIn, MoveOut, Sticky, StickyIn, StickyOut, Zoom, ZoomIn, ZoomOut } from "react-scroll-motion";
+
 
 
 const Body = styled.div`
@@ -30,8 +30,7 @@ const Wrapper = styled.div`
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
-  const ZoomInScrollOut = batch(StickyIn(), FadeIn(), ZoomIn());
-  const FadeUp = batch(Fade(), Move(), Sticky());
+  
 
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
