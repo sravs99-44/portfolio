@@ -28,8 +28,10 @@ width: 100%;
 max-width: 650px;
 gap: 12px;
 margin-bottom: 100px;
-@media (max-width: 960px) {
-    flex-direction: column;
+@media only screen and (max-width: 768px){
+  padding: 10px;
+  gap: 8px;
+  width: 300px;
 }
 `;
 
@@ -151,7 +153,7 @@ const Other = () => {
                 I find fulfillment in tackling problem-solving challenges, particularly those related to Data Structures and Algorithms
                 </Desc>
                 <div align = 'center'>
-              <ButtonCode target='display' href="https://leetcode.com/sravanimalla1999/" > leetcode  </ButtonCode>
+              <ButtonCode target='display' href="https://leetcode.com/sravanimalla1999/" > View Profile </ButtonCode>
               </div>
             </CardContent>
           </Box>
@@ -178,7 +180,7 @@ const Other = () => {
               I keep my work updated in this platform, it contains the codes of the projects that I have worked on in my past years.
             </Desc>
             <div align = 'center'>
-              <ButtonCode target='display' href='https://github.com/sravs99-44' > github  </ButtonCode>
+              <ButtonCode target='display' href='https://github.com/sravs99-44' > View Repositories  </ButtonCode>
               </div>
           </CardContent>
           </Box>

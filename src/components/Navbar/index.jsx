@@ -20,6 +20,12 @@ const StyledNavbar = styled.nav`
 
   cursor: 'pointer'
 
+  @media only screen and (max-width: 768px){
+    padding: 10px;
+    gap: 8px;
+    width: 300px;
+  }
+
 `;
 const NavItems = styled.ul`
 width: 100%;
@@ -38,10 +44,20 @@ a {
   &:hover {
     color: ${({ theme }) => theme.text_primary_hover};
   }
+
+  @media only screen and (max-width: 768px){
+    padding: 10px;
+    gap: 8px;
+    width: 300px;
+  }
 }
 
-@media screen and (max-width: 768px) {
-  display: none;
+
+
+@media only screen and (max-width: 768px){
+  padding: 10px;
+  gap: 8px;
+  width: 300px;
 }
 `;
 
