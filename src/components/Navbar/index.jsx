@@ -13,8 +13,11 @@ const StyledNavbar = styled.nav`
   height: 60px;  // Set the desired height
   gap: 12px;
   padding: 0 6px;
+  border-bottom: 0.2px solid ${({ theme }) => theme.border_colour};
+  border-left: 0.2px solid ${({ theme }) => theme.border_colour};
+  border-right: 0.2px solid ${({ theme }) => theme.border_colour};
+  box-shadow: 0 0 10px ${({ theme }) => theme.border_shadow_colour};
 
-  margin-bottom: 0.5px;
   cursor: 'pointer'
 
 `;
@@ -23,7 +26,7 @@ width: 100%;
 display: flex;
 align-items: center;
 
-gap: 100px;
+gap: 50px;
 padding: 0 20px;
 list-style: none;
 color:  ${({ theme }) => theme.text_primary};  
@@ -50,20 +53,17 @@ const Navbar = ({ darkMode, setDarkMode }) => {
   return (
     <StyledNavbar>
       <NavItems>
-
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#education">Education</a>
+        <a href="#other">Other</a>
         <a href="#contact">Contact</a>
 
         <RightAlignedDiv>
           <DarkMode darkMode={darkMode} setDarkMode={setDarkMode} />
         </RightAlignedDiv>
-
-
-
 
       </NavItems>
 

@@ -9,7 +9,7 @@ const DarkMode = ({ darkMode, setDarkMode }) => {
     setDarkMode(!darkMode);
 
     // Set the theme directly in your preferred way
-    document.querySelector("body").setAttribute("data-theme", darkMode ? "darkTheme" : "lightTheme");
+    //document.querySelector("body").setAttribute("data-theme", darkMode ? "darkTheme" : "lightTheme");
   };
 
   return (

@@ -129,7 +129,7 @@ const Skills = () => {
               <SkillTitle>{skill.title}</SkillTitle>
               <SkillList>
                 {skill.skills.map((item) => (
-                  <SkillItem>
+                  <SkillItem key = {item.name}>
                    
                     {item.name}
                   </SkillItem>

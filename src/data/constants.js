@@ -164,11 +164,7 @@ export const Bio = {
             "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
         },
         
-        {
-          name: "Postman",
-          image:
-            "https://camo.githubusercontent.com/93b32389bf746009ca2370de7fe06c3b5146f4c99d99df65994f9ced0ba41685/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f676574706f73746d616e2f676574706f73746d616e2d69636f6e2e737667",
-        },
+        
         
         
       ],
@@ -221,7 +217,7 @@ export const Bio = {
       date: "August 2023- May 2025",
       grade: "3.00 GPA",
 
-      degree: "Master's in Computer Science and Engineering",
+      degree: "Master's in Computer Science",
     },
     {
       id: 2,

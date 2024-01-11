@@ -134,15 +134,15 @@ export const ProjectCode = styled.a`
     justify-content: center;
     transition: all 0.2s ease-in-out !important;
     background: hsla(271, 100%, 50%, 1);
-    background: linear-gradient(150deg, hsla(171, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-    background: -moz-linear-gradient(125deg, hsla(171, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-    background: -webkit-linear-gradient(125deg, hsla(171, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-    box-shadow:  20px 20px 60px #1F2634,
+    background: linear-gradient(150deg, hsla(220, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
+    background: -moz-linear-gradient(125deg, hsla(220, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
+    background: -webkit-linear-gradient(125deg, hsla(220, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
+    
     -20px -20px 60px #1F2634;
     &:hover {
         transform: scale(1.05);
     transition: all 0.4s ease-in-out;
-    box-shadow:  20px 20px 60px #1F2634,
+    
     filter: brightness(1);
     }    
     

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import _default from "../../themes/default";
+
 
 export const HeroContainer = styled.div`
   background: ${({ theme }) => theme.card_light};
@@ -185,12 +185,12 @@ export const ResumeButton = styled.a`
     background: linear-gradient(250deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
     background: -moz-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
     background: -webkit-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-    box-shadow:  20px 20px 60px #1F2634,
+    
     -20px -20px 60px #1F2634;
     &:hover {
         transform: scale(1.05);
     transition: all 0.4s ease-in-out;
-    box-shadow:  20px 20px 60px #1F2634,
+    
     filter: brightness(1);
     }    
     

@@ -1,6 +1,9 @@
 import React from 'react';
-import { Card, Grid, CardContent, CardMedia, Typography, Button } from '@mui/material';
-import styled from 'styled-components'
+import { Card, Grid, CardContent, CardMedia } from '@mui/material';
+import styled from 'styled-components';
+
+import { useState, useEffect } from 'react';
+
 
 const Container = styled.div`
 display: flex;
@@ -9,7 +12,10 @@ justify-content: center;
 position: relative;
 z-index: 1;
 align-items: center;
-`
+@media (max-width: 960px) {
+  padding: 0px;
+}
+`;
 
 
 const Wrapper = styled.div`
@@ -25,12 +31,13 @@ margin-bottom: 100px;
 @media (max-width: 960px) {
     flex-direction: column;
 }
-`
+`;
 
 export const Desc = styled.div`
     font-size: 18px;
     text-align: center;
     max-width: 600px;
+    max-height:1000px;
     margin-bottom: 20px;
     color: ${({ theme }) => theme.text_secondary};
     @media (max-width: 768px) {
@@ -44,10 +51,11 @@ const Title = styled.h2`
   color: ${({ theme }) => theme.text_secondary};
   margin-bottom: 20px;
   text-align: center;
-`
+`;
 
 const Box = styled.div`
   width: 100%;
+  height: 450px;
   max-width: 500px;
   background: ${({ theme }) => theme.card};
   border: 0.1px solid #854CE6;
@@ -63,7 +71,7 @@ const Box = styled.div`
     padding: 10px 36px;
   }
 
-`
+`;
 
 export const ButtonCode = styled.a`
     -webkit-appearance: button;
@@ -86,15 +94,15 @@ export const ButtonCode = styled.a`
     justify-content: center;
     transition: all 0.2s ease-in-out !important;
     background: hsla(271, 100%, 50%, 1);
-    background: linear-gradient(150deg, hsla(171, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-    background: -moz-linear-gradient(125deg, hsla(171, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-    background: -webkit-linear-gradient(125deg, hsla(171, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-    box-shadow:  20px 20px 60px #1F2634,
+    background: linear-gradient(150deg, hsla(221, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
+    background: -moz-linear-gradient(125deg, hsla(221, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
+    background: -webkit-linear-gradient(125deg, hsla(221, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
+    
     -20px -20px 60px #1F2634;
     &:hover {
         transform: scale(1.05);
     transition: all 0.4s ease-in-out;
-    box-shadow:  20px 20px 60px #1F2634,
+    
     filter: brightness(1);
     }    
     
@@ -113,12 +121,17 @@ export const ButtonCode = styled.a`
 
 
 const Other = () => {
+  
+
+  
+
   return (
-    <Container>
+    <Container id="other">
         <Wrapper>
     <Grid container spacing={8} align= "center" >
         
       {/* First Card */}
+      
       <Grid item>
         
         <Card style={{ maxWidth: '18rem' } }>
@@ -144,6 +157,7 @@ const Other = () => {
           </Box>
         </Card>
       </Grid>
+      
 
 
       {/* Second Card */}
@@ -161,7 +175,7 @@ const Other = () => {
               Github
             </Title>
             <Desc>
-              I keep my work updated in this platform, it contains the code of projects.
+              I keep my work updated in this platform, it contains the codes of the projects that I have worked on in my past years.
             </Desc>
             <div align = 'center'>
               <ButtonCode target='display' href='https://github.com/sravs99-44' > github  </ButtonCode>

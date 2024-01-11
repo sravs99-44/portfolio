@@ -11,7 +11,8 @@ import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Other from './components/Other';
 import Contact from './components/Contact';
-import DarkMode from './components/Navbar/DarkMode';
+import { Animator, ScrollContainer, ScrollPage, batch, Fade, FadeIn, FadeOut, Move, MoveIn, MoveOut, Sticky, StickyIn, StickyOut, Zoom, ZoomIn, ZoomOut } from "react-scroll-motion";
+
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -25,33 +26,31 @@ const Wrapper = styled.div`
   clip-path: polygon(0 0, 100% 0, 100% 100%,30% 98%, 0 100%);
 `
 
-const RightAlignedDiv = styled.div`
-  margin-left: auto;
-`;
+
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
+  const ZoomInScrollOut = batch(StickyIn(), FadeIn(), ZoomIn());
+  const FadeUp = batch(Fade(), Move(), Sticky());
+
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
-      <Navbar darkMode={darkMode} setDarkMode={setDarkMode}>
-        {/* <div><p> About </p></div>
-          <div><p> Education </p></div>
-          <div><p> Projects </p></div>
-          <div><p> Experience </p></div>
-          <div><p> Other </p></div>
-          <RightAlignedDiv>
-            <DarkMode/> 
-            </RightAlignedDiv>  */}
-      </Navbar>
+     
 
       <Body>
+      <Navbar darkMode={darkMode} setDarkMode={setDarkMode}>
+        
+        </Navbar>
         <HeroSection />
         <Wrapper>
-
-          <Skills />
+        <Skills />
+        
           <Experience />
           <Projects />
+        
+        
           <Education />
+          
           <Other />
           <Contact />
 
